@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+</head>
+<body>
+<ul>
+    <li><a th:href="@{/signout}">Sign Out</a></li>
+</ul>
+<h3>Hello! <span th:text="${spotifyProfileName}">User</span></h3>
+<h3>You are following:</h3>
+<ul th:each="follow : ${following}">
+    <li>
+        <img th:src="${follow.images[0].url}" th:width="${follow.images[0].width}"
+             th:height="${follow.images[0].height}" th:alt="${follow.name}"/>
+    </li>
+</ul>
+</body>
+</html>

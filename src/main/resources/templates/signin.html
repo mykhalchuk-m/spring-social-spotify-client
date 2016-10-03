@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sign In</title>
+</head>
+<body>
+<form th:action="@{/signin/spotify}" method="POST">
+    <button type="submit">Sign in with Spotify</button>
+    <input type="hidden" name="scope" value="user-follow-read" />
+</form>
+</body>
+</html>
